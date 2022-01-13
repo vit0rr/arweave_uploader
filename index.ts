@@ -26,8 +26,19 @@ async function main() {
       `${uploader.pctComplete}% complete, ${uploader.uploadedChunks}/${uploader.totalChunks}`
     );
   }
-  let result = await arweave.transactions.getStatus(transactionA.id);
   console.log(`id: ${transactionA.id}`);
-  console.log(result);
+  do {
+    let result = await arweave.transactions.getStatus(transactionA.id);
+    if (result.status === 200) {
+      console.log("Transaction confirmed");
+      break;
+    } else if (result.status === 202){
+      console.log("Transaction pending");
+      await new Promise(r => setTimeout(r, 4000))
+    } else {
+      console.log("Transaction failed:", result.status);
+      break;
+    }
+  } while (true);
 }
 main();
