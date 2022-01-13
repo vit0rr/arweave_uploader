@@ -1,0 +1,24 @@
+{
+  "name": "arweave_uploader",
+  "version": "1.0.0",
+  "description": "- DemoCar.json (example with NFT description/metadata)\r -  arweave-key-{yourkey} (u can get it in https://faucet.arweave.net/)\r -  show_maker.jpeg (example of my NFT image)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vit0rr/arweave_uploader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vit0rr/arweave_uploader/issues"
+  },
+  "homepage": "https://github.com/vit0rr/arweave_uploader#readme",
+  "dependencies": {
+    "arweave": "^1.10.23",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
